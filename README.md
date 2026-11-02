@@ -1,69 +1,88 @@
-Todo List
-Простое приложение для управления задачами, разработанное в рамках тестового задания на позицию Junior Frontend Developer.
-Возможности
-• Добавление новых задач.
-• Запрет добавления пустых задач и строк из пробелов.
-• Отметка задач как выполненных или активных.
-• Удаление задач.
-• Фильтрация задач: все, активные, выполненные.
-• Сохранение задач в localStorage.
-• Сохранение состояния задач после перезагрузки страницы.
-• Адаптивный интерфейс.
-Технологии
-• React
-• TypeScript
-• Vite
-• CSS
-• localStorage
-Установка и запуск
-Для запуска проекта необходимо установить Node.js.
+# Todo List
+
+Простое приложение для управления задачами, разработанное в рамках тестового задания на позицию **Junior Frontend Developer**.
+
+## Возможности
+
+- Добавление новых задач.
+- Валидация ввода: запрет добавления пустых задач и строк из пробелов.
+- Отметка задач как выполненных или активных.
+- Удаление задач.
+- Фильтрация задач: все, активные, выполненные.
+- Сохранение задач в `localStorage`.
+- Восстановление состояния задач после перезагрузки страницы.
+- Адаптивный пользовательский интерфейс.
+
+## Технологии
+
+- React
+- TypeScript
+- Vite
+- CSS
+- localStorage
+
+## Структура проекта
+
+```text
+ZalogHubTest/
+├── public/
+├── src/
+├── .gitignore
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+```
+
+## Установка и запуск
+
+Для запуска проекта необходим установленный [Node.js](https://nodejs.org/).
+
 1. Клонировать репозиторий:
-git clone <URL-репозитория>
+
+```bash
+git clone https://github.com/alexdev727/ZalogHubTest.git
+```
+
 2. Перейти в папку проекта:
-cd ZalogHabTest
+
+```bash
+cd ZalogHubTest
+```
+
 3. Установить зависимости:
+
+```bash
 npm install
+```
+
 4. Запустить приложение в режиме разработки:
+
+```bash
 npm run dev
-5. Открыть в браузере адрес, указанный в терминале Vite (обычно http://localhost:5173).
-Сборка проекта
-Для production-сборки:
+```
+
+5. Открыть в браузере адрес, указанный в терминале Vite (обычно `http://localhost:5173`).
+
+## Сборка проекта
+
+Создать production-сборку:
+
+```bash
 npm run build
-Для проверки сборки:
+```
+
+Запустить предварительный просмотр production-сборки:
+
+```bash
 npm run preview
-Время выполнения
-Примерное время выполнения тестового задания: 4–6 часов.
-Автор
-Тестовое задание — Junior Frontend Developer.
-
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Автор
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+Тестовое задание на позицию Junior Frontend Developer.
