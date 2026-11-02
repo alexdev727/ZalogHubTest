@@ -1,0 +1,195 @@
+:root {
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-text: #1f2937;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-background: #f3f4f6;
+  --color-danger: #ef4444;
+  --color-danger-hover: #fee2e2;
+  --color-completed: #9ca3af;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 60px 16px;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 480px;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 0 0 24px;
+  text-align: center;
+  color: var(--color-text);
+}
+
+/* Форма */
+.todo-form {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+}
+
+.todo-form input:focus {
+  border-color: var(--color-primary);
+}
+
+.todo-form button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  background-color: var(--color-primary);
+}
+
+.todo-form button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Фильтры */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+.filters button {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  color: #374151;
+  background-color: #e5e7eb;
+}
+
+.filters button.active {
+  color: #ffffff;
+  background-color: var(--color-primary);
+}
+
+/* Задачи */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+}
+
+.todo-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.todo-label input {
+  flex-shrink: 0;
+}
+
+.todo-item.completed span {
+  color: var(--color-completed);
+  text-decoration: line-through;
+}
+
+/* Удаление */
+.delete-button {
+  flex-shrink: 0;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  color: var(--color-danger);
+  background: transparent;
+}
+
+.delete-button:hover {
+  background-color: var(--color-danger-hover);
+}
+
+/* Сообщения */
+.empty-message {
+  padding: 16px 0;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+/* Счётчик */
+.todo-footer {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 480px) {
+  .app {
+    padding: 24px 12px;
+  }
+
+  .todo-container {
+    padding: 18px;
+  }
+
+  .filters {
+    gap: 6px;
+  }
+
+  .filters button {
+    padding: 9px 6px;
+    font-size: 13px;
+  }
+}
